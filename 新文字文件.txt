@@ -1,0 +1,83 @@
+main.py
+擁有存取權的使用者
+未共用
+系統屬性
+類型
+文字
+大小
+2 KB
+儲存空間使用量
+2 KB
+位置
+我的雲端硬碟
+擁有者
+我
+上次修改日期
+我於 2022年8月10日修改過
+上次開啟日期
+我於 晚上11:52開啟過
+建立日期
+2022年8月10日 (使用 Google Drive Web (Unverified))
+新增說明
+檢視者可以下載
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+url = "https://lol.fandom.com/wiki/Special:RunQuery/PickBanHistory?PBH%5Bpage%5D=LCK+2022+Summer&PBH%5Btextonly%5D=Yes&_run="
+x = requests.get(url)
+
+soup = BeautifulSoup(x.content, 'html.parser')
+rows = soup.find("table", {"id": "pbh-table"}).find("tbody").find_all("tr")
+def row_coverted(row):
+        cells = row.find_all("td")
+        result_dict = {}
+        result_dict["vod"] = cells[-1].string
+        result_dict["rr5"] = cells[-3].string
+        result_dict["rr4"] = cells[-4].string
+        result_dict["rr3"] = cells[-5].string
+        result_dict["rr2"] = cells[-6].string
+        result_dict["rr1"] = cells[-7].string
+        result_dict["br5"] = cells[-8].string
+        result_dict["br4"] = cells[-9].string
+        result_dict["br3"] = cells[-10].string
+        result_dict["br2"] = cells[-11].string
+        result_dict["br1"] = cells[-12].string
+        result_dict["rp5"] = cells[-13].string
+        result_dict["bp4-5"] = cells[-14].string
+        result_dict["rp4"] = cells[-15].string
+        result_dict["bb5"] = cells[-16].string
+        result_dict["rb5"] = cells[-17].string
+        result_dict["bb4"] = cells[-18].string
+        result_dict["rb4"] = cells[-19].string
+        result_dict["rp3"] = cells[-20].string
+        result_dict["bp2-3"] = cells[-21].string
+        result_dict["rp1-2"] = cells[-22].string
+        result_dict["bp1"] = cells[-23].string
+        result_dict["rb3"] = cells[-24].string
+        result_dict["bb3"] = cells[-25].string
+        result_dict["rb2"] = cells[-26].string
+        result_dict["bb2"] = cells[-27].string
+        result_dict["rb1"] = cells[-28].string
+        result_dict["bb1"] = cells[-29].string
+        result_dict["patch"] = cells[-30].string
+        result_dict["winner"] = cells[-31].string
+        result_dict["score"] = cells[-32].string
+        result_dict["red"] = cells[-33].string
+        result_dict["blue"] = cells[-34].string
+        result_dict["phase"] = cells[-35].string
+        return result_dict
+def filter_rows(row):
+    cells = row.find_all("td")
+    return len(cells)==35
+
+rows = list(filter(filter_rows, rows))
+rows = list(map(row_coverted,rows))
+
+
+df = pd.DataFrame(rows)
+df.to_csv("out.csv",index = False)
+
+
+
+
+

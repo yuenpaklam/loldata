@@ -1,0 +1,136 @@
+<div>
+    <div>yuumi</div>
+    <table>
+        <tbody>
+        <div>win rate</div>
+        <div>62%</div>
+        
+        <tr>
+            <td>
+                nan
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                https://youtu.be/RM-ZwalUpYA?t=2987
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                https://youtu.be/rSc_J7cw_I4?t=12966
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                https://youtu.be/rSc_J7cw_I4?t=2937
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                https://youtu.be/iJtIKs_kB_E?t=14244
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                https://youtu.be/ZoTAZgJMK1Y?t=14975
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                https://youtu.be/iJtIKs_kB_E?t=17653
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                https://youtu.be/RM-ZwalUpYA?t=15827
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                https://youtu.be/kz2XfDWp9TY?t=16752
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                https://youtu.be/xniPD7ipr5g?t=3000
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                nan
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                https://youtu.be/y_EIhqNqACU?t=11589
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                https://youtu.be/y_EIhqNqACU?t=7993
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                https://youtu.be/iJtIKs_kB_E?t=11344
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                https://youtu.be/iJtIKs_kB_E?t=8073
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                https://youtu.be/iJtIKs_kB_E?t=4559
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                https://youtu.be/f-D31hPaR-I?t=4594
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                https://youtu.be/ZoTAZgJMK1Y?t=11733
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                https://youtu.be/RM-ZwalUpYA?t=12452
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                https://youtu.be/kz2XfDWp9TY?t=20825
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                https://youtu.be/NX73w9uEbWw?t=7157
+            </td>
+        </tr>
+        
+        </tbody>
+    </table>
+</div>

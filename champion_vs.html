@@ -1,0 +1,54 @@
+<div>
+    <div>{{champion_name}}</div>
+    <div>{{champ1_win_rate}}</div>
+    <div>{{champion_name_2}}</div>
+    <div>{{champ2_win_rate}}</div>
+    <div>{{champion_name}}</div>
+    <div>{{champ1_blue_win_rate}}</div>
+    <div>{{champion_name_2}}</div>
+    <div>{{champ2_blue_win_rate}}</div>
+    <div>{{champion_name_2}}</div>
+    <div>{{champ2_red_win_rate}}</div>
+    <div>{{champion_name}}</div>
+    <div>{{champ1_red_win_rate}}</div>
+    <table>
+        <thead>
+            <tr><th>Region</th>
+            <th>Blue champ</th>
+            <th>Red champ</th>
+            <th>Blue side</th>
+            <th>Red side</th>
+            <th>Winner</th>
+            <th>Vod</th></tr>
+        </thead>
+        <tbody>
+
+        {% for key,value in vod_df.iterrows() %}
+
+        <tr>
+            <td>
+                {{value['region']}}
+            </td>
+            <td>
+                {{value['bluechamp']}}
+            </td>
+            <td>
+                {{value['redchamp']}}
+            </td>
+            <td>
+                {{value['blue']}}
+            </td>
+            <td>
+                {{value['red']}}
+            </td>
+            <td>
+                {{value['winner']}}
+            </td>
+            <td>
+                <a href="{{value['vod']}}" target="_blank" >{{value['vod']}}</a>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>

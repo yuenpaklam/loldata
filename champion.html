@@ -1,0 +1,46 @@
+<div>
+    <div>{{champion_name}}</div>
+
+        <div>win rate</div>
+        <div>{{stat_row['win_rate']}}</div>
+        <div>blue ban rate</div>
+        <div>{{stat_row['blue_ban_rate']}}</div>
+        <div>red ban rate</div>
+        <div>{{stat_row['red_ban_rate']}}</div>
+        <div>ban rate</div>
+        <div>{{stat_row['ban_rate']}}</div>
+        <div>pick rate</div>
+        <div>{{stat_row['pick_rate']}}</div>
+    <table>
+        <thead>
+            <tr><th>Region</th>
+            <th>Blue side</th>
+            <th>Red side</th>
+            <th>Winner</th>
+            <th>Vod</th></tr>
+        </thead>
+        <tbody>
+
+        {% for key,value in vod_df.iterrows() %}
+
+        <tr>
+            <td>
+                {{value['region']}}
+            </td>
+            <td>
+                {{value['blue']}}
+            </td>
+            <td>
+                {{value['red']}}
+            </td>
+            <td>
+                {{value['winner']}}
+            </td>
+            <td>
+                <a href="{{value['vod']}}" target="_blank" >{{value['vod']}}</a>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
